@@ -1,0 +1,96 @@
+.header-container {
+  background: #FDF1EBFF;
+  padding: 10px;
+
+  .header-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+
+
+    .titulo-container {
+      p {
+        color: #725C5CFF;
+        font-family: Roboto, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.41px;
+      }
+
+      h1 {
+        color: #725C5CFF;
+        font-family: Roboto, sans-serif;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 22.78px;
+      }
+
+    }
+
+    .usuario-container {
+      display: flex;
+      align-items: center;
+
+      .dropdown {
+        border: 1px solid #CCCCCCFF;
+        padding: 3px;
+        border-radius: 4px;
+
+
+        select {
+          border: none;
+          background: none;
+          outline: none;
+          background: #FDF1EB;
+          font-family: Quicksand, sans-serif;
+          font-weight: 400;
+          color: #333333FF;
+          font-size: 14px;
+          line-height: 17.5px;
+          padding: 5px;
+
+        }
+      }
+
+      .login {
+        display: flex;
+
+        .email {
+          display: grid;
+          margin: 0 20px;
+
+
+          .bem-vindo {
+            grid-column: 2;
+          }
+
+          .user-email {
+            grid-column-start: 1;
+            grid-column-end: 3;
+          }
+        }
+
+        .img {
+          width: 40px;
+          height: 40px;
+          align-self: center;
+        }
+
+        .notify {
+          content: "2";
+          font-family: 'Roboto', serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 0.625rem;
+          color: #FFFFFF;
+          background: #F85959;
+          padding: 2px 4px;
+          border-radius: 50%;
+        }
+      }
+
+    }
+  }
+}
