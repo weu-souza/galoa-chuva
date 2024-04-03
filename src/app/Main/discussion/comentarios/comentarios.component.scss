@@ -1,0 +1,51 @@
+.comentarios {
+  margin-top: 15px;
+  border: 1px solid #E7E7E7;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+
+  .titulo-comentario {
+    font-family: Quicksand, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ED7839;
+  }
+
+  .autor-comentario {
+    font-family: Quicksand, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #5C5C5C;
+    margin-bottom: 10px;
+  }
+
+  .pergunta-comment {
+    font-family: Quicksand, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17.5px;
+    color: #4D4D4D;
+    margin-bottom: 10px;
+  }
+
+  .btn-comentario-container {
+    display: flex;
+
+    .btn-coment {
+      margin: 10px;
+    }
+
+    .btn-like {
+      display: flex;
+
+
+      i {
+        margin-right: 5px
+      }
+
+
+    }
+  }
+}

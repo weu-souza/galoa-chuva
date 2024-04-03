@@ -1,0 +1,19 @@
+.discussao {
+  display: grid;
+  max-width: 1200px;
+  margin: 30px auto 0 auto;
+  border: 1px solid #ECECEC;
+  border-radius: 4px;
+
+  .titulo-container {
+    background: #FDF1EB;
+    padding: 20px;
+    border: 1px solid #ECECEC;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    color: #4E4E4E;
+
+  }
+}

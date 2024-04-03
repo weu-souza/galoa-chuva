@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-discussao',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./discussao.component.scss']
 })
 export class DiscussaoComponent {
+
+
 
 }
