@@ -5,21 +5,22 @@ import {Component, OnInit} from '@angular/core';
   templateUrl: './comentarios.component.html',
   styleUrls: ['./comentarios.component.scss']
 })
-export class ComentariosComponent implements OnInit{
+export class ComentariosComponent implements OnInit {
   like: number;
   comentarios: number;
   click: boolean;
+  showSubMenu: boolean;
 
   constructor() {
     this.like = 0;
     this.comentarios = 0;
     this.click = false;
+    this.showSubMenu = false;
   }
 
   ngOnInit(): void {
     this.like = 0
   }
-
 
 
   likeBtn() {
@@ -37,5 +38,9 @@ export class ComentariosComponent implements OnInit{
       return "pi pi-heart-fill";
     }
     return "pi pi-heart";
+  }
+
+  attApagar() {
+    this.showSubMenu = !this.showSubMenu;
   }
 }

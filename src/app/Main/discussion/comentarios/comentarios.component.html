@@ -6,11 +6,17 @@
     dimensão e impacto de
     processo formativo situado impacto de processo formativo processo...</p>
 
-  <div class="btn-comentario-container">
-    <div class="btn-coment"><a><i class="pi pi-ellipsis-v"></i></a></div>
+  <div class="btn-comentario-container ">
+    <div class="btn-apagar-atualizar slide-left " *ngIf="showSubMenu">
+      <a class="gambiarra"><i class="pi pi-pencil"></i>Atualizar</a>
+      <a><i class="pi pi-times-circle" ></i>excluir</a>
+    </div>
+    <div class="btn-coment"><a (click)="attApagar()"><i class="pi pi-ellipsis-v" style="cursor: pointer"></i></a></div>
     <div class="btn-like btn-coment">
-      <i (click)=" likeBtn()" [ngClass]="coracao()"></i>
+      <a (click)=" likeBtn()" style="cursor: pointer; display: flex">
+      <i  [ngClass]="coracao()" style="align-self: center"></i>
       <p class="">{{ like }} like</p>
+      </a>
     </div>
 
     <p class="btn-coment">{{ comentarios }} comentarios</p>
