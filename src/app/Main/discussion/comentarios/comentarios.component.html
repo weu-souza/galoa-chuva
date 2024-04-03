@@ -11,15 +11,20 @@
       <a class="gambiarra"><i class="pi pi-pencil"></i>Atualizar</a>
       <a><i class="pi pi-times-circle" ></i>excluir</a>
     </div>
-    <div class="btn-coment"><a (click)="attApagar()"><i class="pi pi-ellipsis-v" style="cursor: pointer"></i></a></div>
+
+    <div class="btn-coment" style=" align-self: center;"><a (click)="attApagar()"><i class="pi pi-ellipsis-v" style="cursor: pointer;color: #ED7839; " ></i></a></div>
+
     <div class="btn-like btn-coment">
       <a (click)=" likeBtn()" style="cursor: pointer; display: flex">
-      <i  [ngClass]="coracao()" style="align-self: center"></i>
+     <div>
+       <i  [ngClass]="coracao()"></i>
+     </div>
       <p class="">{{ like }} like</p>
       </a>
     </div>
 
-    <p class="btn-coment">{{ comentarios }} comentarios</p>
+    <p class="btn-coment">{{ comentarios }} resposta</p>
+
   </div>
 
 </section>

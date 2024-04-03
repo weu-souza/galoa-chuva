@@ -1,6 +1,7 @@
 .article-container {
   max-width: 1200px;
   display: flex;
+  flex-wrap: wrap;
   margin: 20px auto 0 auto;
   justify-content: space-between;
 
