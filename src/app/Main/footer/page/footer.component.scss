@@ -1,0 +1,46 @@
+.footer-container{
+  max-width: 1200px;
+  margin: 50px auto;
+  display: grid;
+  .borda{
+    border-top: 1px solid #E7E7E7;
+    margin-bottom: 20px;
+
+  }
+  .footer-content{
+    margin: 0 auto;
+    display: flex;
+  flex-wrap: wrap;
+
+
+  .logo{
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    border: 0;
+    a{
+      font-family: Quicksand, sans-serif;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background: #71478E;
+      border-radius: 5px;
+      color: #FFF;
+      margin: 0 auto;
+      padding: calc(10px / 2);
+      width: 200px;
+    }
+  }
+
+  p{
+    color: #5C5C5C;
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.875rem;
+    width: 800px;
+    margin: 20px;
+    align-self: center;
+
+  }
+  }
+}
