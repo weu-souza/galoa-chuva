@@ -1,14 +1,20 @@
 <article class="discussao">
   <h2 class="titulo-container">Discussões</h2>
   <!--  criar topico-->
-  <app-criar-topico></app-criar-topico>
-  <!--topico input-->
-  <app-topico-input></app-topico-input>
-  <!--topico criado-->
-  <app-topico-criado></app-topico-criado>
+  <ng-container *ngIf="index == 0">
+    <app-criar-topico></app-criar-topico>
+  </ng-container>
 
+  <!--topico input-->
+  <ng-container *ngIf="index == 1">
+    <app-topico-input ></app-topico-input>
+  </ng-container>
+
+  <!--topico criado-->
+<ng-container *ngIf="index == 2">
+  <app-topico-criado></app-topico-criado>
+</ng-container>
   <!--comentarios-->
-  <app-comentarios></app-comentarios>
   <app-comentarios></app-comentarios>
 
 

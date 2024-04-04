@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {DiscussionService} from "../../service/discussion.service";
 
 @Component({
   selector: 'app-criar-topico',
@@ -6,8 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./criar-topico.component.scss']
 })
 export class CriarTopicoComponent {
+  constructor(private service: DiscussionService) {
+  }
 
   criarTopico() {
-
+    this.service.steps(1);
   }
 }
