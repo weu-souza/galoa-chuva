@@ -34,15 +34,19 @@
       align-items: center;
 
       .dropdown {
+        display: flex;
         border: 1px solid #CCCCCCFF;
-        padding: 3px;
+        padding: 5px;
         border-radius: 4px;
-
+        i{
+          align-self: center;
+        }
 
         select {
           border: none;
           background: none;
           outline: none;
+          appearance: none;
           background: #FDF1EB;
           font-family: Quicksand, sans-serif;
           font-weight: 400;
@@ -50,7 +54,7 @@
           font-size: 14px;
           line-height: 17.5px;
           padding: 5px;
-
+          cursor: pointer;
         }
       }
 
