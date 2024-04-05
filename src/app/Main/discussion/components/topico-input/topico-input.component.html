@@ -1,12 +1,12 @@
 <section class="topico-input">
     <h1>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</h1>
-    <div class="formulario">
+    <div class="formulario" [formGroup]="adicionarTopico">
       <label class="assunto" for="assunto">Assunto</label>
-      <input type="text" id="assunto" name="Assunto"
+      <input type="text" id="assunto" name="Assunto" formControlName="assunto"
              placeholder="Defina um tópico sucinto para notificar os autores...">
       <div class=" text-area-container">
         <label class="assunto" for="conteudo">Conteúdo</label>
-        <textarea name="Conteúdo" id="conteudo" ></textarea>
+        <textarea name="Conteúdo" id="conteudo" formControlName="conteudo"></textarea>
         <div class="enviar-container">
           <div class="btn-container">
 
@@ -14,7 +14,6 @@
           </div>
 
         </div>
-
       </div>
     </div>
 </section>

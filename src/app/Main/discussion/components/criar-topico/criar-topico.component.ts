@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {DiscussionService} from "../../service/discussion.service";
+import {DiscussionService} from "../../Api/service/discussion.service";
 
 @Component({
   selector: 'app-criar-topico',

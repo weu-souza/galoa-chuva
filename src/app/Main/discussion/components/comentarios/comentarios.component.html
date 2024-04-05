@@ -1,30 +1,71 @@
 <section class="comentarios">
-  <h1 class="titulo-comentario">Assunto da pergunta aparece aqui</h1>
+
+  <h1 class="titulo-comentario">{{ topicosArr.assunto }}</h1>
   <p class="autor-comentario">Carlos Henrique Santos</p>
 
-  <p class="pergunta-comment">Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da
-    dimensão e impacto de
-    processo formativo situado impacto de processo formativo processo...</p>
+  <p class="pergunta-comment">{{ topicosArr.conteudo }}</p>
 
   <div class="btn-comentario-container ">
     <div class="btn-apagar-atualizar slide-left " *ngIf="showSubMenu">
       <a class="gambiarra"><i class="pi pi-pencil"></i>Atualizar</a>
-      <a><i class="pi pi-times-circle" ></i>excluir</a>
+      <a (click)="apagar()"><i class="pi pi-times-circle"></i>excluir</a>
     </div>
 
-    <div class="btn-coment" style=" align-self: center;"><a (click)="attApagar()"><i class="pi pi-ellipsis-v" style="cursor: pointer;color: #ED7839; " ></i></a></div>
+    <div class="btn-coment" style=" align-self: center;"><a (click)="attApagar()"><i class="pi pi-ellipsis-v"
+                                                                                     style="cursor: pointer;color: #ED7839; "></i></a>
+    </div>
 
     <div class="btn-like btn-coment">
       <a (click)=" likeBtn()" style="cursor: pointer; display: flex">
-     <div>
-       <i  [ngClass]="coracao()"></i>
-     </div>
-      <p class="">{{ like }} like</p>
+        <div>
+          <i [ngClass]="coracao()"></i>
+        </div>
+        <p class="">{{ like }} like</p>
       </a>
     </div>
-
-    <p class="btn-coment">{{ comentarios }} resposta</p>
+    <a (click)="showComents()">
+      <p class="btn-coment">{{ comentariosNmr }} resposta</p>
+    </a>
 
   </div>
 
 </section>
+<ng-container *ngIf="showComent">
+
+  <div class="campo-resposta">
+
+    <div class="respostas">
+      <div class="respostas-autor">
+        <p>Adriano da Silva</p>
+        <div class="resposta-svg">
+          <p class="px-3 tag-autor">Autor</p>
+          <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20.6603 7.33594C20.8426 7.51823 20.9337 7.73958 20.9337 8C20.9337 8.26042 20.8426 8.48177 20.6603 8.66406L9.09778 20.2266C8.91549 20.4089 8.69413 20.5 8.43372 20.5C8.1733 20.5 7.95194 20.4089 7.76965 20.2266L1.20715 13.6641C1.02486 13.4818 0.933716 13.2604 0.933716 13C0.933716 12.7396 1.02486 12.5182 1.20715 12.3359L2.76965 10.7734C2.95194 10.5911 3.1733 10.5 3.43372 10.5C3.69413 10.5 3.91549 10.5911 4.09778 10.7734L8.43372 15.1484L17.8087 5.77344C17.965 5.59115 18.1733 5.5 18.4337 5.5C18.6941 5.5 18.9155 5.59115 19.0978 5.77344L20.6603 7.33594ZM8.00403 11.4766L3.62903 7.10156C3.31653 6.78906 3.31653 6.48958 3.62903 6.20312L5.38684 4.44531C5.51705 4.3151 5.66028 4.25 5.81653 4.25C5.99882 4.25 6.15507 4.3151 6.28528 4.44531L8.43372 6.59375L14.3712 0.695312C14.4754 0.565104 14.6056 0.5 14.7618 0.5C14.9441 0.5 15.1004 0.565104 15.2306 0.695312L16.9884 2.45312C17.3009 2.73958 17.3009 3.03906 16.9884 3.35156L8.8634 11.4766C8.75924 11.6068 8.61601 11.6719 8.43372 11.6719C8.25142 11.6719 8.10819 11.6068 8.00403 11.4766Z"
+              fill="#ED7839"/>
+          </svg>
+
+        </div>
+      </div>
+      <p class="resposta-do-autor">Também ínteressante lembrar que o relato inscreve-se no campo da análise da dimensão
+        e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no
+        campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.
+
+        Situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e
+        impacto de processo formativo situado impacto de processo formativo processo.</p>
+    </div>
+
+
+    <div class="respostas-ouvinte">
+      <h1>Carlos Henrique Santos</h1>
+      <p class="resposta">Consegui entender melhor agora! Parece que a variação da análise da dimensão e impacto de
+        processo formativo situado impacto de processo formativo.
+
+        Obrigada pela resposta, muito interessante o seu trabalho! </p>
+    </div>
+
+  </div>
+
+</ng-container>
+

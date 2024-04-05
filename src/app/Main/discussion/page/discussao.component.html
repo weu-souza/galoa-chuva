@@ -7,15 +7,15 @@
 
   <!--topico input-->
   <ng-container *ngIf="index == 1">
-    <app-topico-input ></app-topico-input>
+    <app-topico-input></app-topico-input>
   </ng-container>
 
   <!--topico criado-->
-<ng-container *ngIf="index == 2">
-  <app-topico-criado></app-topico-criado>
-</ng-container>
+  <ng-container *ngIf="index == 2">
+    <app-topico-criado></app-topico-criado>
+  </ng-container>
   <!--comentarios-->
-  <app-comentarios></app-comentarios>
-
-
+  <ng-container *ngFor="let topicos of topicosModel">
+    <app-comentarios [topicosArr]="topicos"></app-comentarios>
+  </ng-container>
 </article>

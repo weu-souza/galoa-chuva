@@ -1,3 +1,21 @@
+@mixin comentario-titulo {
+  font-family: Quicksand, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: #5C5C5C;
+}
+
+@mixin comentario-resposta {
+  font-family: Quicksand, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #4D4D4D;
+  text-align: start;
+}
+
+
 .comentarios {
   border: 1px solid #E7E7E7;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
@@ -76,16 +94,23 @@
     .btn-coment {
       margin: 10px;
     }
-    p{
+
+    p {
       align-self: center;
     }
+
+    a {
+      align-self: center;
+      cursor: pointer;
+    }
+
     .btn-like {
       display: flex;
 
       i {
         background: #ED7839;
         border-radius: 4px;
-        box-shadow: 0 2px 2px #0000003D,0 0 2px #0000001F;
+        box-shadow: 0 2px 2px #0000003D, 0 0 2px #0000001F;
         margin-right: 15px;
         padding: 6px 9px 5px 10px;
         color: #FFFFFF;
@@ -95,8 +120,74 @@
       }
 
 
+    }
+  }
+
+
+}
+
+.campo-resposta{
+  .respostas {
+    background: #F8F8F8;
+    border: 1px solid #E7E7E7;
+    border-radius: 0;
+    padding: 30px;
+    width: 1170px;
+    margin: 0 auto;
+
+    .respostas-autor {
+      display: flex;
+      justify-content: space-between;
+
+
+      p {
+        @include comentario-titulo();
+        align-self: center;
+      }
+
+      .resposta-svg {
+        display: flex;
+        padding: 5px;
+
+        p {
+          margin-right: 10px;
+          font-size: 14px;
+          line-height: 17px;
+          color: #ED7839;
+          align-self: center;
+
+        }
+
+        svg {
+          width: 30px;
+          height: 23px;
+        }
+
+      }
+    }
+
+    .resposta-do-autor {
+      @include comentario-resposta();
+      text-align: start;
+    }
+  }
+
+  .respostas-ouvinte {
+    background: #FFFFFF;
+    padding: 30px;
+    border: 1px solid #E7E7E7;
+    width: 1170px;
+    margin: 0 auto 10px auto;
+
+    h1 {
+      @include comentario-titulo();
+    }
+
+    p {
+      @include comentario-resposta();
 
     }
+
   }
 }
 
