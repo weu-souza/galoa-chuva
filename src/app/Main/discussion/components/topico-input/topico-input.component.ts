@@ -22,10 +22,11 @@ export class TopicoInputComponent implements OnInit {
   }
 
   enviar() {
-    this.service.steps(2)
+
     if (this.adicionarTopico.dirty && this.adicionarTopico.valid) {
       this.topico = Object.assign({}, this.topico, this.adicionarTopico.value);
-      this.service.postTopicos(this.topico);
+      this.service.postTopicos(this.topico);+
+        this.service.steps(2)
     }
   }
 
